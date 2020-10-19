@@ -1,0 +1,2 @@
+module SqirrelsHelper
+end
