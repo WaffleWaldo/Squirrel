@@ -1,6 +1,6 @@
 class Park < ApplicationRecord
-    has_many :squirrels
-    has_many :users, through: :squirrels
+    has_many :squirreltwos
+    has_many :users, through: :squirreltwos
 
     #1. park overview - include map
     

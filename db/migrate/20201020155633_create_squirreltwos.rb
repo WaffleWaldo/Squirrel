@@ -1,6 +1,6 @@
-class CreateSquirrels < ActiveRecord::Migration[6.0]
+class CreateSquirreltwos < ActiveRecord::Migration[6.0]
   def change
-    create_table :squirrels do |t|
+    create_table :squirreltwos do |t|
       t.integer :user_id
       t.integer :park_id
       t.integer :date
@@ -11,7 +11,6 @@ class CreateSquirrels < ActiveRecord::Migration[6.0]
       t.boolean :eating
       t.boolean :foraging
       t.string :other_activities
-
       t.boolean :kuk
       t.boolean :quaas
       t.boolean :wails
@@ -21,8 +20,6 @@ class CreateSquirrels < ActiveRecord::Migration[6.0]
       t.boolean :indifferent
       t.boolean :runs_from
       t.string :other_interactions
-
-      
 
 
       t.timestamps

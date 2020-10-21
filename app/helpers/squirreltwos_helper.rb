@@ -1,0 +1,2 @@
+module SquirreltwosHelper
+end

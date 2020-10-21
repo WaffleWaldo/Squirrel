@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :squirrels
-    has_many :parks, through: :squirrels
+    has_many :squirreltwos
+    has_many :parks, through: :squirreltwos
 
 
 #1. user sign in

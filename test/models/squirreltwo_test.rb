@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SqirrelTest < ActiveSupport::TestCase
+class SquirreltwoTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

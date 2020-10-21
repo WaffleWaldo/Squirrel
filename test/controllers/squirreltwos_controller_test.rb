@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SqirrelsControllerTest < ActionDispatch::IntegrationTest
+class SquirreltwosControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

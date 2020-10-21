@@ -1,0 +1,81 @@
+NEED TO CHANGE SQUIRRL TO SQUIRRELTWO
+
+
+
+<% if flash[:my_errors] %>
+  <% flash[:my_errors].each do |error| %>
+    <p style="color:red;"><%= error %></p>
+  <% end %>
+<% end %>
+
+
+<%= form_for @squirreltwo do |f| %>
+  <%= f.label :user_id %> #default to current user
+
+  <%= f.label :park_id %>
+  <%= f.collection_select :park, Park.all, :id, :hectare %>
+
+  <%= f.label :date %>
+  <%= f.dateime_select xxxxxxx %> # still got to look at code
+
+   <%= f.label :color %>
+  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :color %>
+
+  <h1>Squirreltwo Activity</h1>
+
+   <%= f.label :running %>
+  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :running %>
+
+   <%= f.label :chasing %>
+  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :chasing %>
+
+   <%= f.label :climbing %>
+  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :climbing %>
+
+   <%= f.label :eating %>
+  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :eating %>
+
+   <%= f.label :foraging %>
+  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :foraging %>
+
+   <%= f.label :other_activities %>
+  <%= f.text_field %>
+
+
+  <h2>Squirreltwo Sounds</h2>
+
+   <%= f.label :kuk %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :kuk %>
+
+   <%= f.label :quaas %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :quaas %>
+
+   <%= f.label :wails %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :wails %>
+
+
+  <h3>Squirreltwo Tail Description</h3>
+
+   <%= f.label :tail_flags %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :tail_flags %>
+
+   <%= f.label :tail_twitches %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :tail_twitches %>
+
+
+<h4>Squirreltwo Demeanor </h4> 
+
+   <%= f.label :approaches %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :approaches %>
+
+   <%= f.label :indifferent %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :indifferent %>
+
+   <%= f.label :runs_from %>
+ <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :runs_from %>
+
+   <%= f.label :other_interactions %>
+  <%= f.text_field %>
+
+  <%= f.submit %>
+<% end %>

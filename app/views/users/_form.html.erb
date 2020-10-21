@@ -1,0 +1,23 @@
+<% if flash[:my_errors] %>
+  <% flash[:my_errors].each do |error| %>
+    <p style="color:red;"><%= error %></p>
+  <% end %>
+<% end %>
+
+
+<%= form_for @user do |f| %>
+  <%= f.label :user_id %> #default to current user
+
+    <%= f.label :name %>
+    <%= f.text_field %>
+
+    <%= f.label :user_name %>
+    <%= f.text_field %>
+
+    <%= f.label :password %> <%# commented line --> hide characters & enter to reconfirm? %>
+    <%= f.text_field %>
+
+
+    <%= f.submit %>
+
+<% end %>
