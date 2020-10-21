@@ -1,2 +1,6 @@
 <h1>Welcome to the Park main page</h1>
-Parks
+<% @parks.each do |park| %>
+    <h1 style='font-size:1.5rem;margin-top:50px'>Park Section:
+    <%= link_to park.hectare, park_path(park) %>
+    </h1>
+<% end %>
