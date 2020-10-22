@@ -218,7 +218,7 @@ GEM
     zeitwerk (2.4.0)
 
 PLATFORMS
-  java-
+  java
   ruby
   x64-mingw32
   x86-mingw32

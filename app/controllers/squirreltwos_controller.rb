@@ -32,13 +32,14 @@ class SquirreltwosController < ApplicationController
                 flash[:errors] = @squirreltwo.errors.full_messages
                 redirect_to edit_squirrel_path(@squirreltwo)
             end
-    
-        def destroy
-            @squirreltwo.destroy
-            redirect_to squirrels_path
         end
-    
-    
+
+        def destroy
+            @squirreltwo = sSquirreltwo.find(params[:id])
+            if @squirreltwo.present?
+                @squirreltwo.destroy
+            end
+            redirect_to squirreltwos_url
         end
     
     
