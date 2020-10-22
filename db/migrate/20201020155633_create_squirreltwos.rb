@@ -3,7 +3,7 @@ class CreateSquirreltwos < ActiveRecord::Migration[6.0]
     create_table :squirreltwos do |t|
       t.integer :user_id
       t.integer :park_id
-      t.integer :date
+      t.string :date
       t.string :color
       t.boolean :running
       t.boolean :chasing

@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_10_20_155633) do
   create_table "squirreltwos", force: :cascade do |t|
     t.integer "user_id"
     t.integer "park_id"
-    t.integer "date"
+    t.string "date"
     t.string "color"
     t.boolean "running"
     t.boolean "chasing"
