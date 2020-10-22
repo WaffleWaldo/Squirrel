@@ -1,8 +1,10 @@
 <h1> SQUIRREL INDEX (List of Submissions) </h1>
 
 <% @squirreltwos.each do |squirrel| %>
-    <h1 style='font-size:1.5rem;margin-top:50px'>Squirrel
-    <%= link_to squirrel, squirreltwo_path(squirrel) %>
-    </h1>
-    
+    <p>Entry
+    <%= link_to squirrel.id , squirreltwo_path(squirrel) %>
+    </p>
 <% end %>
+
+
+

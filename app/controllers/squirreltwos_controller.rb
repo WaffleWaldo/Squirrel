@@ -35,7 +35,7 @@ class SquirreltwosController < ApplicationController
         end
 
         def destroy
-            @squirreltwo = sSquirreltwo.find(params[:id])
+            @squirreltwo = Squirreltwo.find(params[:id])
             if @squirreltwo.present?
                 @squirreltwo.destroy
             end

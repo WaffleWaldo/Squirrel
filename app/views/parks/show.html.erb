@@ -1,0 +1,10 @@
+<h1>Hectare Details - <%= @park.hectare %> </h1>
+
+<p>Squirrel Sightings: <%=Squirreltwo.all%></p>
+<p>Squirrel Total Count: <%= @park.hectare %></p>
+
+<%= @squirreltwo.park_id.uniq.each do |park| %>
+<p><%= park.hectare  %></p>
+<% end%>
+
+

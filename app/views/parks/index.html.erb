@@ -1,6 +1,12 @@
-<h1>Welcome to the Park main page</h1>
+<h1>Welcome to the Park Main Page</h1>
+<h4>Learn more about the diversity of each park hectare below:</h4>
+<iframe src="https://data.cityofnewyork.us/dataset/2018-Squirrel-Census-Hectare-Grid-Map/t572-gp5u/embed?width=800&height=600" width="800" height="600" style="border:0; padding: 0; margin: 0;"></iframe>
+
+<p>North ---> South = 1 ---> 42</p>
+<p>East ---> West = A ---> I</p>
+
 <% @parks.each do |park| %>
-    <h1 style='font-size:1.5rem;margin-top:50px'>Park Section:
+    <li> Park Section:
     <%= link_to park.hectare, park_path(park) %>
-    </h1>
+    </li>
 <% end %>

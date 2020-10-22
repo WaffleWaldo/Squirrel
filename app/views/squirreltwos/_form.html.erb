@@ -1,6 +1,3 @@
-NEED TO CHANGE SQUIRRL TO SQUIRRELTWO
-
-
 
 <% if flash[:my_errors] %>
   <% flash[:my_errors].each do |error| %>
@@ -10,72 +7,74 @@ NEED TO CHANGE SQUIRRL TO SQUIRRELTWO
 
 
 <%= form_for @squirreltwo do |f| %>
-  <%= f.label :user_id %> #default to current user
+  <%= f.label :user_id %> #default to current user<br><br>
 
   <%= f.label :park_id %>
-  <%= f.collection_select :park, Park.all, :id, :hectare %>
+  <%= f.collection_select :park, Park.all, :id, :hectare %><br><br>
 
   <%= f.label :date %>
-  <%= f.dateime_select xxxxxxx %> # still got to look at code
+  <%= f.text_field :date%><br><br>
+
 
    <%= f.label :color %>
-  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :color %>
+  <%= f.collection_select :color, Squirreltwo.select(:color).distinct, :id, :color %><br><br>
 
-  <h1>Squirreltwo Activity</h1>
+  <h2>Squirrel Activity</h2>
 
    <%= f.label :running %>
-  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :running %>
+  <%= f.collection_select :running, Squirreltwo.select(:running).distinct, :id, :running %><br><br>
 
    <%= f.label :chasing %>
-  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :chasing %>
+  <%= f.collection_select :chasing, Squirreltwo.select(:chasing).distinct, :id, :chasing %><br><br>
 
    <%= f.label :climbing %>
-  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :climbing %>
+  <%= f.collection_select :climbing, Squirreltwo.select(:climbing).distinct, :id, :climbing %><br><br>
 
    <%= f.label :eating %>
-  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :eating %>
+  <%= f.collection_select :eating, Squirreltwo.select(:eating).distinct, :id, :eating %><br><br>
 
    <%= f.label :foraging %>
-  <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :foraging %>
+  <%= f.collection_select :foraging, Squirreltwo.select(:foraging).distinct, :id, :foraging %><br><br>
 
    <%= f.label :other_activities %>
-  <%= f.text_field %>
+  <%= f.text_field :other_activities%>
 
 
-  <h2>Squirreltwo Sounds</h2>
+  <h2>Squirrel Sounds</h2>
 
    <%= f.label :kuk %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :kuk %>
+ <%= f.collection_select :kuk, Squirreltwo.select(:kuk).distinct, :id, :kuk %><br><br>
 
    <%= f.label :quaas %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :quaas %>
+ <%= f.collection_select :quaas, Squirreltwo.select(:quaas).distinct, :id, :quaas %><br><br>
 
    <%= f.label :wails %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :wails %>
+ <%= f.collection_select :wails, Squirreltwo.select(:wails).distinct, :id, :wails %><br><br>
 
 
-  <h3>Squirreltwo Tail Description</h3>
+  <h2>Squirrel Tail Description</h2>
 
    <%= f.label :tail_flags %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :tail_flags %>
+ <%= f.collection_select :tail_flags, Squirreltwo.select(:tail_flags).distinct, :id, :tail_flags %>
 
    <%= f.label :tail_twitches %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :tail_twitches %>
+ <%= f.collection_select :tail_twitches, Squirreltwo.select(:tail_twitches).distinct, :id, :tail_twitches %><br><br>
 
 
-<h4>Squirreltwo Demeanor </h4> 
+<h2>Squirrel Demeanor </h2> 
 
    <%= f.label :approaches %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :approaches %>
+ <%= f.collection_select :approaches, Squirreltwo.select(:approaches).distinct, :id, :approaches %><br><br>
 
    <%= f.label :indifferent %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :indifferent %>
+ <%= f.collection_select :indifferent, Squirreltwo.select(:indifferent).distinct, :id, :indifferent %><br><br>
 
    <%= f.label :runs_from %>
- <%= f.collection_select :squirreltwo, Squirreltwo.all, :id, :runs_from %>
+ <%= f.collection_select :runs_from, Squirreltwo.select(:runs_from).distinct, :id, :runs_from %><br><br>
 
    <%= f.label :other_interactions %>
-  <%= f.text_field %>
+  <%= f.text_field :other_interactions%><br><br>
+
 
   <%= f.submit %>
 <% end %>
