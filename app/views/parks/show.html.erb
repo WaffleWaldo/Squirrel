@@ -1,5 +1,6 @@
-<h1>Hectare Details </h1>
+<h1>Hectare Details - <%= @park.hectare %> </h1>
 
-<h2><%= @park.hectare %></h2>
-<p>Squirrel Sightings: <%=Squirreltwo.all%></p>
+<p>Squirrel Sightings: <%=Squirreltwo.park_id(park)%></p>
 <p>Squirrel Total Count: <%= @park.hectare %></p>
+
+
