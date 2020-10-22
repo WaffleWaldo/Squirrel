@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_155633) do
+ActiveRecord::Schema.define(version: 2020_10_22_174305) do
 
   create_table "parks", force: :cascade do |t|
     t.string "hectare"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_10_20_155633) do
   create_table "squirreltwos", force: :cascade do |t|
     t.integer "user_id"
     t.integer "park_id"
-    t.string "date"
+    t.integer "date"
     t.string "color"
     t.boolean "running"
     t.boolean "chasing"
@@ -48,6 +48,12 @@ ActiveRecord::Schema.define(version: 2020_10_20_155633) do
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "encrypted_password", limit: 128
+    t.string "confirmation_token", limit: 128
+    t.string "remember_token", limit: 128
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
 end

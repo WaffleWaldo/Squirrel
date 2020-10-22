@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include Clearance::User
+
     has_many :squirreltwos
     has_many :parks, through: :squirreltwos
 

@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
     def index
     end
-
-    # def show
-    #     @user = current session --> double check w/ lecture
-    # end
     
     def edit
     end
